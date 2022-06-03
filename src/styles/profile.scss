@@ -1,0 +1,70 @@
+.profileContainer {
+  height: calc(100vh - 125px);
+  width: 100vw;
+  padding: 40px;
+  overflow: hidden;
+
+  .profileWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .profileImgContainer { 
+      margin-top: 80px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        width: 600px;
+      }
+    }
+
+    .infoWrapper {
+      display: flex;
+      flex-direction: column;
+      padding-top: 70px;
+      margin-left: 200px;
+
+      .memberInfo {
+        margin-bottom: 60px;
+
+        .rowTitle {
+          font-size: 40px;
+          margin-bottom: 20px;
+          color: #4B4C4C;
+        }
+
+        .member {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          .memberItem {
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .accountInfo {
+
+        .rowTitle {
+          font-size: 40px;
+          margin-bottom: 20px;
+          color: #4B4C4C;
+        }
+
+        .account {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          .accountItem {
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

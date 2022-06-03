@@ -1,0 +1,32 @@
+.LIHomeContainer {
+    height: calc(100vh - 125px);
+    width: 100vw;
+    overflow: hidden;
+
+    .LIHomeWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        height: calc(100vh - 125px);
+        width: 100vw;
+
+        .leftSide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightSide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .rightSideWrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.choresListContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 65%;
+  height: 70%;
+  background: #fff;
+  text-align: center;
+  padding: 32px;
+  overflow-y: scroll;
+  box-shadow: 4px 4px 10px 0px #4B4C4C;
+
+  .choresForm {
+    margin-bottom: 20px;
+
+    .choresInput {
+      padding: 14px 32px 14px 16px;
+      border-radius: 4px 0 0 4px;
+      border: 2px solid rgb(240, 171, 129);
+      outline: none;
+    }
+
+    .choresButton {
+      padding: 16px;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      outline: none;
+      background: linear-gradient(
+        90deg,
+        rgb(240, 171, 129) 0%,
+        rgb(255,145,77) 100%
+      );
+      color: white;
+      text-transform: capitalize;
+    }
+  }
+
+  .choresRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: white;
+    background: linear-gradient(
+      90deg,
+      rgb(255,145,77) 0%,
+      rgb(240, 171, 129) 100%
+    );
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+  }
+
+  .complete {
+    text-decoration: line-through;
+  }
+
+  .iconsContainer {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .seperator {
+    height: 1px;
+    width: 80%;
+    align-self: center;
+    background-color: black;
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 179, 179);
+}

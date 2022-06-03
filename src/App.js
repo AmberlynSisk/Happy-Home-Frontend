@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/pages/home';
+import Signup from "./components/pages/signup";
+import Login from "./components/pages/login";
+import Error from "./components/pages/error";
+import './styles/main.scss';
+import ChooseMember from './components/pages/loggedIn/chooseMember';
+import AddMember from './components/forms/addMember';
+import Calendar from './components/pages/loggedIn/calendar';
+import Lists from './components/pages/loggedIn/lists';
+import Profile from './components/pages/loggedIn/profile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/member" element={<ChooseMember />} />
+        <Route exact path="/add-member" element={<AddMember />} />
+        <Route exact path="/calendar" element={<Calendar />} />
+        <Route exact path="/lists" element={<Lists />} />
+        <Route exact path="/profile" element={<Profile />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
