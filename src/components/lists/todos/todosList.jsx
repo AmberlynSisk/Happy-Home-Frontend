@@ -51,7 +51,7 @@ const TodosList = () => {
       .then((res) => {
         setTodos(
           [...todos].filter((item) => {
-            return item.list_id != id;
+            return item.list_id !== id;
           })
         );
       })

@@ -50,7 +50,7 @@ const ChoresList = () => {
       .then((res) => {
         setChores(
           [...chores].filter((item) => {
-            return item.list_id != id;
+            return item.list_id !== id;
           })
         );
       })

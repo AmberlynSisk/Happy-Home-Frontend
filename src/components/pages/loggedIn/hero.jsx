@@ -63,7 +63,7 @@ const LIHero = () => {
     const memberId = window.localStorage.getItem("currentMemberId");
     setCurrentMember(memberId);
     console.log(memberInfo);
-  }, [currentMember, todos, chores]);
+  }, [currentMember]);
 
   return (
     <>
