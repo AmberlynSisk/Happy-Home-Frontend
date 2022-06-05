@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { useAppContext } from '../../../Context';
 import {Link, useNavigate} from 'react-router-dom';
+import Logo from "../../images/Happy.png";
 
 const ChooseMember = () => {
   let navigate = useNavigate();
@@ -51,16 +52,16 @@ const ChooseMember = () => {
     <>
       <div className="memberContainer">
         <div className="chooseMember">
+          <img src={Logo} alt="logo" />
           <form onSubmit={handleClick}>
-            <select className="chooseMember" onChange={(e) => setMemberId(e.target.value)}>
+            <select className="chooseMemberSelect" onChange={(e) => setMemberId(e.target.value)}>
               <option className="memberOption" value="null">Choose A Family Member</option>
               {renderMembers()}
             </select>
-            <button type="submit" className="selectedMember">GO</button>
-            <Link to="/add-member">Add a new family member!</Link>
+            <button type="submit" className="memberButton">GO</button>
           </form>
+          <Link className="newMemberLink" to="/add-member">Add a new family member!</Link>
         </div>
-      
       </div>
     </>
   )

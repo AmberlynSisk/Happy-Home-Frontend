@@ -1,0 +1,53 @@
+.memberContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+
+  .chooseMember {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 30em;
+    }
+
+    form {
+      padding: 50px;
+
+      .chooseMemberSelect {
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 4px 0 0 4px;
+        border: 1px solid #FF904D;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .memberButton {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #FF904D;
+        border: 2px solid #FF904D;
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    .newMemberLink {
+      text-decoration: none;
+      color: #4B4C4C;
+      font-size: 1.5em;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: #FF904D;
+      }
+    }
+  }
+}

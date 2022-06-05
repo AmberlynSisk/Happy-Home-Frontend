@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../../Context";
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
+import Logo from "../images/Happy.png";
 
 const AddMember = () => {
   let navigate = useNavigate();
@@ -42,7 +43,15 @@ const AddMember = () => {
   });
 
   return (
-    <form className="addAMember" onSubmit={(e) => handleAddMember(e)}>
+    <div className="addMemberContainer">
+      <div className="addMemberWrapper">
+        <div className="addMemberLeft">
+          <div className="addMemberLogo">
+            <img src={Logo} alt="logo" />
+          </div>
+        </div>
+        <div className="addMemberRight">
+          <form className="addAMember" onSubmit={(e) => handleAddMember(e)}>
             <h3 className="formTitle">Add a Family Member</h3>
             <input
               type="text"
@@ -64,7 +73,10 @@ const AddMember = () => {
               Add Family Member
             </button>
           </form>
-  )
-}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default AddMember
+export default AddMember;
