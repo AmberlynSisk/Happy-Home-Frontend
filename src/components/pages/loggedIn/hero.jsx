@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../../../Context";
 import Navbar from "../../navigation/navbar";
 import axios from "axios";
 
 const LIHero = () => {
+  const navigate = useNavigate();
   const { currentMember, setCurrentMember } = useAppContext();
   const [memberInfo, setMemberInfo] = useState({});
   const [todos, setTodos] = useState([]);
   const [chores, setChores] = useState([]);
+
+  const handleListClick = () => {
+    navigate("/lists");
+  };
 
   const getMemberInfo = () => {
     axios
@@ -82,7 +88,7 @@ const LIHero = () => {
           </div>
           <div className="rightSide">
             <div className="rightSideWrapper">
-              <div className="RSRight list">
+              <div className="RSRight list" onClick={handleListClick}>
                 <h1 className="listTitle">To-Dos</h1>
                 <ul className="home-list">
                   {todos.map((todo) => {
@@ -90,7 +96,7 @@ const LIHero = () => {
                   })}
                 </ul>
               </div>
-              <div className="RSLeft list">
+              <div className="RSLeft list" onClick={handleListClick}>
                 <h1 className="listTitle">Chores</h1>
                 <ul className="home-list">
                   {chores.map((chore) => {
