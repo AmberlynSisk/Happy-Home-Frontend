@@ -21,7 +21,7 @@
   .calendarSidebar {
     width: 300px;
     line-height: 1.5;
-    background: #eaf9ff;
+    background: #ffd0b4;
     border-right: 1px solid #d3e2e8;
 
     .sidebarSection {
@@ -31,11 +31,23 @@
         margin-bottom: 25px;
       }
 
-      form {
+      .eventForm {
         margin-left: 15px;
 
-        input {
+        .eventBtn {
+          margin-top: 10px;
+          padding: 5px;
+          border: 1px solid black;
+          border-radius: 3px;
+          background-color: #ffd0b4;
+          transition: 0.3s ease-in-out;
 
+          &:hover {
+            cursor: pointer;
+            background-color: #FF904D;
+            border: 1px solid transparent;
+            color: #fff;
+          }
         }
       }
     }

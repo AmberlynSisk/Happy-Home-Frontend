@@ -66,9 +66,9 @@ const Calendar = () => {
         </div>
         <div className="sidebarSection">
           <h2 className="addEventitle">Add An Event</h2>
-          <form onSubmit={onSubmit}>
-            <div>
-              <label>Event Title</label>
+          <form className="eventForm" onSubmit={onSubmit}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <label style={{marginBottom: "3px"}}>Event Title</label>
               <input
                 placeholder="Title"
                 value={title}
@@ -86,7 +86,7 @@ const Calendar = () => {
               <Datetime value={end} onChange={(date) => setEnd(date)} />
             </div>
 
-            <button>Add Event</button>
+            <button className="eventBtn">Add Event</button>
           </form>
         </div>
       </div>
@@ -107,7 +107,6 @@ const Calendar = () => {
   };
 
   const deleteEvent = (id) => {
-    console.log(id);
     axios
       .delete(`http://127.0.0.1:5000/event/delete/${id}`)
       .then(() => {
@@ -141,8 +140,8 @@ const Calendar = () => {
   };
 
   useEffect(() => {
-    const memberId = window.localStorage.getItem("currentId");
-    setCurrentUser(memberId);
+    const userId = window.localStorage.getItem("currentId");
+    setCurrentUser(userId);
     getEvents();
   }, []);
 

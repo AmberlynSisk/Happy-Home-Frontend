@@ -17,6 +17,19 @@
             align-items: center;
             height: 100%;
             width: 100%;
+
+            .titleWrapper {
+                margin-bottom: 50px;
+
+                .homeTitle {
+                    font-family: 'Roboto Serif', serif;
+                }
+            }
+
+            .calendarWrapper {
+                height: 100%;
+                width: 80%;
+            }
         }
 
         .rightSide {
