@@ -68,7 +68,6 @@ const LIHero = () => {
     getMemberInfo();
     const memberId = window.localStorage.getItem("currentMemberId");
     setCurrentMember(memberId);
-    console.log(memberInfo);
   }, [currentMember]);
 
   return (
@@ -92,7 +91,7 @@ const LIHero = () => {
                 <h1 className="listTitle">To-Dos</h1>
                 <ul className="home-list">
                   {todos.map((todo) => {
-                    return <li className="list-text">{todo.text}</li>;
+                    return <li className="list-text" key={todo.list_id}>{todo.text}</li>;
                   })}
                 </ul>
               </div>
@@ -100,7 +99,7 @@ const LIHero = () => {
                 <h1 className="listTitle">Chores</h1>
                 <ul className="home-list">
                   {chores.map((chore) => {
-                    return <li className="list-text">{chore.text}</li>;
+                    return <li className="list-text" key={chore.list_id}>{chore.text}</li>;
                   })}
                 </ul>
               </div>

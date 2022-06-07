@@ -9,6 +9,9 @@ import AddMember from './components/forms/addMember';
 import Calendar from './components/pages/loggedIn/calendar';
 import Lists from './components/pages/loggedIn/lists';
 import Profile from './components/pages/loggedIn/profile';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 function App() {
   return (
