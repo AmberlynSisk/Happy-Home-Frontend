@@ -29,7 +29,7 @@ const Calendar = () => {
   };
 
   const handleEventAdd = () => {
-    fetch("http://127.0.0.1:5000/event/add", {
+    fetch("https://happyhome-api.herokuapp.com/event/add", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -95,7 +95,7 @@ const Calendar = () => {
 
   const getEvents = () => {
     axios
-      .get(`http://127.0.0.1:5000/event/get/${currentUser}`)
+      .get(`https://happyhome-api.herokuapp.com/event/get/${currentUser}`)
       .then((res) => {
         setEvents(res.data);
       })
@@ -108,7 +108,7 @@ const Calendar = () => {
 
   const deleteEvent = (id) => {
     axios
-      .delete(`http://127.0.0.1:5000/event/delete/${id}`)
+      .delete(`https://happyhome-api.herokuapp.com/event/delete/${id}`)
       .then(() => {
         setEvents(
           [...events].filter((event) => {

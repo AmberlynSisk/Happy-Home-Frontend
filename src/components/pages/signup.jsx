@@ -21,7 +21,7 @@ const Signup = () => {
       setError(true);
       setErrorMessage("Error: The passwords must match");
     } else {
-      fetch("http://127.0.0.1:5000/user/add", {
+      fetch("https://happyhome-api.herokuapp.com/user/add", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({

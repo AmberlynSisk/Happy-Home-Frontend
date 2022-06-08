@@ -16,7 +16,7 @@ const Profile = () => {
 
   const getMemberInfo = () => {
     axios
-      .get(`http://127.0.0.1:5000/member/get/${currentMember}`)
+      .get(`https://happyhome-api.herokuapp.com/member/get/${currentMember}`)
       .then((res) => {
         setMemberInfo(res.data);
       })
@@ -29,7 +29,7 @@ const Profile = () => {
 
   const getUserInfo = () => {
     axios
-      .get(`http://127.0.0.1:5000/user/get/${currentUser}`)
+      .get(`https://happyhome-api.herokuapp.com/user/get/${currentUser}`)
       .then((res) => {
         setUserInfo(res.data);
       })
@@ -42,7 +42,7 @@ const Profile = () => {
 
   const deleteCurrentMember = () => {
     axios
-      .delete(`http://127.0.0.1:5000/member/delete/${currentMember}`)
+      .delete(`https://happyhome-api.herokuapp.com/member/delete/${currentMember}`)
       .then(() => {
         setMemberInfo({});
         navigate("/member");

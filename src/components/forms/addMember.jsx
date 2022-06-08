@@ -13,7 +13,7 @@ const AddMember = () => {
   const handleAddMember = (e) => {
     e.preventDefault();
 
-    fetch("http://127.0.0.1:5000/member/add", {
+    fetch("https://happyhome-api.herokuapp.com/member/add", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({

@@ -13,7 +13,7 @@ const Lists = () => {
 
   const getMemberInfo = () => {
     axios
-      .get(`http://127.0.0.1:5000/member/get/${currentMember}`)
+      .get(`https://happyhome-api.herokuapp.com/member/get/${currentMember}`)
       .then((res) => {
         setMemberInfo(res.data);
       })

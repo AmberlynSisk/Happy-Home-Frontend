@@ -21,7 +21,7 @@ const LIHero = () => {
 
   const getMemberInfo = () => {
     axios
-      .get(`http://127.0.0.1:5000/member/get/${currentMember}`)
+      .get(`https://happyhome-api.herokuapp.com/member/get/${currentMember}`)
       .then((res) => {
         setMemberInfo(res.data);
       })
@@ -34,7 +34,7 @@ const LIHero = () => {
 
   const renderTodos = () => {
     axios
-      .get(`http://127.0.0.1:5000/item/get/${currentMember}`)
+      .get(`https://happyhome-api.herokuapp.com/item/get/${currentMember}`)
       .then((res) => {
         setTodos(
           res.data.filter((item) => {
@@ -51,7 +51,7 @@ const LIHero = () => {
 
   const renderChores = () => {
     axios
-      .get(`http://127.0.0.1:5000/item/get/${currentMember}`)
+      .get(`https://happyhome-api.herokuapp.com/item/get/${currentMember}`)
       .then((res) => {
         setChores(
           res.data.filter((item) => {
@@ -68,7 +68,7 @@ const LIHero = () => {
 
   const getEvents = () => {
     axios
-      .get(`http://127.0.0.1:5000/event/get/${currentUser}`)
+      .get(`https://happyhome-api.herokuapp.com/event/get/${currentUser}`)
       .then((res) => {
         setEvents(res.data);
       })

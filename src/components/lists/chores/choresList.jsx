@@ -10,7 +10,7 @@ const ChoresList = () => {
 
   const renderChores = () => {
     axios
-      .get(`http://127.0.0.1:5000/item/get/${currentMember}`)
+      .get(`https://happyhome-api.herokuapp.com/item/get/${currentMember}`)
       .then((res) => {
         setChores(
           res.data.filter((item) => {
@@ -26,7 +26,7 @@ const ChoresList = () => {
   };
 
   const addChore = (text) => {
-    fetch("http://127.0.0.1:5000/item/add", {
+    fetch("https://happyhome-api.herokuapp.com/item/add", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -46,7 +46,7 @@ const ChoresList = () => {
 
   const removeChore = (id) => {
     axios
-      .delete(`http://127.0.0.1:5000/item/delete/${id}`)
+      .delete(`https://happyhome-api.herokuapp.com/item/delete/${id}`)
       .then((res) => {
         setChores(
           [...chores].filter((item) => {

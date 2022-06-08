@@ -12,7 +12,7 @@ const ChooseMember = () => {
 
   const getMembers = () => {
     axios
-      .get(`http://127.0.0.1:5000/members/get/${currentUser}`)
+      .get(`https://happyhome-api.herokuapp.com/members/get/${currentUser}`)
       .then((res) => {
         setMembers(res.data);
         window.localStorage.setItem("membersData", JSON.stringify(res.data))
