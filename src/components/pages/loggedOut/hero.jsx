@@ -4,7 +4,7 @@ import TypeWrite from '../../effects/typewriter';
 
 const LOHero = () => {
   return (
-    <>
+    <div id="home">
         <div className="hero-container">
             <div className="bg-img">
                 <img src={Family} alt="family" />
@@ -18,7 +18,7 @@ const LOHero = () => {
                 <LinkR to="/signup" className="signup-btn">Sign up for free!</LinkR> 
             </div>
         </div>
-    </>
+    </div>
   )
 }
 

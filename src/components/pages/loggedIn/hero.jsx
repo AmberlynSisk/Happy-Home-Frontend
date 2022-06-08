@@ -5,6 +5,7 @@ import Navbar from "../../navigation/navbar";
 import axios from "axios";
 import FullCalendar from "@fullcalendar/react";
 import listPlugin from '@fullcalendar/list'
+import Sidebar from "../../navigation/sidebar";
 
 const LIHero = () => {
   const navigate = useNavigate();
@@ -14,6 +15,11 @@ const LIHero = () => {
   const [todos, setTodos] = useState([]);
   const [chores, setChores] = useState([]);
   const [events, setEvents] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+      setIsOpen(!isOpen)
+  };
 
   const handleListClick = () => {
     navigate("/lists");
@@ -92,7 +98,8 @@ const LIHero = () => {
 
   return (
     <>
-      <Navbar />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
       <div className="LIHomeContainer">
         <div className="LIHomeWrapper">
           <div className="leftSide">

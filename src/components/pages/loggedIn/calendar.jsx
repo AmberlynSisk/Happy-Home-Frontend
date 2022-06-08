@@ -10,6 +10,7 @@ import moment from "moment";
 import Datetime from "react-datetime";
 import Swal from "sweetalert2";
 import "sweetalert2/src/sweetalert2.scss";
+import Sidebar from "../../navigation/sidebar";
 
 const Calendar = () => {
   const { currentUser, setCurrentUser } = useAppContext();
@@ -18,6 +19,11 @@ const Calendar = () => {
   const [start, setStart] = useState(new Date());
   const [end, setEnd] = useState(new Date());
   const calendarRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+      setIsOpen(!isOpen)
+  };
 
   const onEventAdded = (event) => {
     let calendarApi = calendarRef.current.getApi();
@@ -147,7 +153,8 @@ const Calendar = () => {
 
   return (
     <>
-      <Navbar />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
       <div className="calendarContainer">
         {renderSidebar()}
         <div className="calendarWrapper">

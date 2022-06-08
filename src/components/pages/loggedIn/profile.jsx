@@ -6,6 +6,7 @@ import Family from "../../images/family3.svg";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "sweetalert2/src/sweetalert2.scss";
+import Sidebar from "../../navigation/sidebar";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -13,6 +14,11 @@ const Profile = () => {
     useAppContext();
   const [memberInfo, setMemberInfo] = useState({});
   const [userInfo, setUserInfo] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+      setIsOpen(!isOpen)
+  };
 
   const getMemberInfo = () => {
     axios
@@ -42,7 +48,9 @@ const Profile = () => {
 
   const deleteCurrentMember = () => {
     axios
-      .delete(`https://happyhome-api.herokuapp.com/member/delete/${currentMember}`)
+      .delete(
+        `https://happyhome-api.herokuapp.com/member/delete/${currentMember}`
+      )
       .then(() => {
         setMemberInfo({});
         navigate("/member");
@@ -81,7 +89,8 @@ const Profile = () => {
 
   return (
     <>
-      <Navbar />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
       <div className="profileContainer">
         <div className="profileWrapper">
           <div className="infoWrapper">

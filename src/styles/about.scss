@@ -1,48 +1,77 @@
 .about-container {
+  height: calc(100vh - 125px);
+  width: 100vw;
+  background: #4b4c4c;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  overflow: hidden;
+
+  .left-side {
     height: calc(100vh - 125px);
-    width: 100vw;
-    background: #4B4C4C;
-    color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-    .left-side {
-        height: calc(100vh - 125px);
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        
-        p {
-            width: 100%;
-            margin-left: 100px;
-        }
+    p {
+      width: 100%;
+      margin-left: 100px;
 
-        .title-one, .title-two {
-            font-family: 'Roboto Serif', serif;
-            font-size: 1.6em;
-            margin-bottom: 20px;
-        }
-
-        .about-p {
-            font-size: 1.4em;
-            margin-top: 10px;
-            color: #d8d8d8;
-        }
+      @media screen and (max-width: 912px) {
+        margin-left: 80px;
+      }
     }
 
-    .right-side {
-        height: calc(100vh - 125px);
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .title-one,
+    .title-two {
+      font-family: "Roboto Serif", serif;
+      font-size: 1.6em;
+      margin-bottom: 20px;
 
-        img {
-            height: 80%;
-        }
+      @media screen and (max-width: 375px) {
+        font-size: 1.2em;
+      }
     }
+
+    .about-p {
+      font-size: 1.4em;
+      margin-top: 10px;
+      color: #d8d8d8;
+
+      @media screen and (max-width: 912px) {
+        font-size: 1.4em;
+      }
+
+      @media screen and (max-width: 540px) {
+        font-size: 1em;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  .right-side {
+    height: calc(100vh - 125px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 80%;
+
+      @media screen and (max-width: 912px) {
+        width: 90%;
+      }
+
+      @media screen and (max-width: 414px) {
+        width: 100%;
+      }
+    }
+  }
 }

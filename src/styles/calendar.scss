@@ -2,6 +2,12 @@
   display: flex;
   height: calc(100vh - 125px);
   font-size: 14px;
+  overflow: hidden;
+
+  @media screen and (max-width: 375px) {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
 
   h2 {
     margin: 0;
@@ -24,11 +30,30 @@
     background: #ffd0b4;
     border-right: 1px solid #d3e2e8;
 
+    @media screen and (max-width: 540px) {
+      width: 200px;
+    }
+
+    @media screen and (max-width: 375px) {
+      width: 100vw;
+      height: 350px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
     .sidebarSection {
       padding: 2em;
 
+      @media screen and (max-width: 375px) {
+        padding: 0;
+      }
+
       .addEventitle {
         margin-bottom: 25px;
+
+        @media screen and (max-width: 375px) {
+          margin-bottom: 10px;
+        }
       }
 
       .eventForm {
@@ -57,6 +82,10 @@
     flex-grow: 1;
     padding: 3em;
     height: calc(100vh - 125px);
+
+    @media screen and (max-width: 540px) {
+      padding: 2em;
+    }
   }
 
   .fc {

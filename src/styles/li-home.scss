@@ -1,78 +1,135 @@
 .LIHomeContainer {
+  height: calc(100vh - 125px);
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  .LIHomeWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     height: calc(100vh - 125px);
     width: 100vw;
-    overflow: hidden;
+    padding: 80px 20px 20px 20px;
 
-    .LIHomeWrapper {
+    @media screen and (max-width: 540px) {
+      grid-template-columns: 1fr;
+      padding: 20px 10px 10px 20px;
+    }
+
+    @media screen and (max-height: 600px) {
+      padding: 20px 10px 10px 20px;
+    }
+
+    .leftSide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      .titleWrapper {
+        margin-bottom: 50px;
+
+        @media screen and (max-width: 540px) {
+          margin-bottom: 10px;
+        }
+
+        @media screen and (max-height: 600px) {
+          margin-bottom: 20px;
+        }
+
+        .homeTitle {
+          font-family: "Roboto Serif", serif;
+        }
+      }
+
+      .calendarWrapper {
+        height: 100%;
+        width: 80%;
+
+        @media screen and (max-width: 540px) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .rightSide {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+
+      .rightSideWrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 20px;
-        height: calc(100vh - 125px);
-        width: 100vw;
-        padding: 80px 20px 20px 20px;
+        grid-gap: 20px;
+        height: 100%;
+        width: 100%;
 
-        .leftSide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-
-            .titleWrapper {
-                margin-bottom: 50px;
-
-                .homeTitle {
-                    font-family: 'Roboto Serif', serif;
-                }
-            }
-
-            .calendarWrapper {
-                height: 100%;
-                width: 80%;
-            }
+        @media screen and (max-width: 540px) {
+          grid-template-columns: 1fr;
+          margin-bottom: 25px;
         }
 
-        .rightSide {
-            display: flex;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
+        .list {
+          height: 100%;
+          width: 100%;
+          background: rgb(255, 222, 203);
+          background: linear-gradient(
+            288deg,
+            rgba(255, 222, 203, 1) 0%,
+            rgba(255, 187, 146, 1) 19%,
+            rgba(255, 160, 102, 1) 44%,
+            rgba(255, 144, 77, 1) 100%
+          );
+          color: #4b4c4c;
+          border-radius: 5px;
+          overflow-y: scroll;
+          transition: 0.3s ease-in-out;
 
-            .rightSideWrapper {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 20px;
-                height: 100%;
-                width: 100%;
+          &:hover {
+            cursor: pointer;
+            background: rgb(255, 222, 203);
+            background: linear-gradient(
+              -288deg,
+              rgba(255, 222, 203, 1) 0%,
+              rgba(255, 187, 146, 1) 19%,
+              rgba(255, 160, 102, 1) 44%,
+              rgba(255, 144, 77, 1) 100%
+            );
+          }
 
-                .list {
-                    height: 100%;
-                    width: 100%;
-                    background: rgb(255,222,203);
-                    background: linear-gradient(288deg, rgba(255,222,203,1) 0%, rgba(255,187,146,1) 19%, rgba(255,160,102,1) 44%, rgba(255,144,77,1) 100%);
-                    color: #4B4C4C;
-                    border-radius: 5px;
-                    
-                    .listTitle {
-                        text-align: center;
-                        margin-top: 25px;
-                    }
+          .listTitle {
+            text-align: center;
+            margin-top: 25px;
+          }
 
-                    .home-list {
-                        list-style: none;
-                        margin: 20px 15px 0 15px;
+          .home-list {
+            list-style: none;
+            margin: 20px 15px 0 15px;
 
-                        .list-text {
-                            font-size: 20px;
-                            text-transform: capitalize;
-                            padding: 10px;
-                            background-color: #fff;
-                            margin-bottom: 10px;
-                            border-radius: 5px;
-                        }
-                    }
-                }
+            .list-text {
+              font-size: 20px;
+              text-transform: capitalize;
+              padding: 10px;
+              background-color: #fff;
+              margin-bottom: 10px;
+              border-radius: 5px;
+
+              @media screen and (max-width: 540px) {
+                padding: 5px;
+                font-size: 16px;
+              }
+
+              @media screen and (max-height: 600px) {
+                padding: 5px;
+                font-size: 16px;
+              }
             }
+          }
         }
+      }
     }
+  }
 }

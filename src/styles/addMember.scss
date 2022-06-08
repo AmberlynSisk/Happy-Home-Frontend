@@ -5,11 +5,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   .addMemberWrapper {
     width: 80%;
     height: 80%;
     display: flex;
+
+    @media screen and (max-width: 540px) {
+      height: 100%;
+      width: 100%;
+      padding: 15px;
+      flex-direction: column;
+    }
 
     .addMemberLeft {
       flex: 1;
@@ -18,13 +26,25 @@
       justify-content: center;
       align-items: flex-start;
 
+      @media screen and (max-width: 540px) {
+        align-items: center;
+      }
+
       .addMemberLogo {
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
+        @media screen and (max-width: 540px) {
+          justify-content: center;
+        }
+
         img {
           height: 90%;
+
+          @media screen and (max-width: 375px) {
+            height: 70%;
+          }
         }
       }
     }
@@ -44,10 +64,18 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @media screen and (max-width: 375px) {
+          height: 300px;
+        }
+
         .formTitle {
           text-align: center;
           font-size: 25px;
           margin-top: 20px;
+
+          @media screen and (max-width: 280px) {
+            font-size: 20px;
+          }
         }
 
         .memberInput {

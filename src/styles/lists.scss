@@ -8,6 +8,12 @@
   color: #4B4C4C;
   background-color: #d8d8d8;
 
+  @media screen and (max-width: 540px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+  }
+
   .todoWrapper {
     height: calc(100vh - 125px);
     width: 100%;

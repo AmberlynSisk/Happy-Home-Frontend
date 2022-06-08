@@ -4,6 +4,14 @@
   padding: 40px;
   overflow: hidden;
 
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+
+  @media screen and (max-height: 600px) {
+    padding: 0;
+  }
+
   .profileWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -14,8 +22,28 @@
       justify-content: flex-start;
       align-items: center;
 
+      @media screen and (max-width: 768px) {
+        margin-top: 60px;
+      }
+
+      @media screen and (max-height: 600px) {
+        margin-top: 60px;
+      }
+
       img {
         width: 600px;
+
+        @media screen and (max-width: 768px) {
+          width: 400px;
+        }
+
+        @media screen and (max-width: 540px) {
+          width: 200px;
+        }
+
+        @media screen and (max-height: 600px) {
+          width: 400px;
+        }
       }
     }
 
@@ -25,13 +53,43 @@
       padding-top: 70px;
       margin-left: 200px;
 
+      @media screen and (max-width: 768px) {
+        padding-top: 50px;
+        margin-left: 100px;
+      }
+
+      @media screen and (max-width: 540px) {
+        margin-left: 50px;
+      }
+
+      @media screen and (max-height: 600px) {
+        padding-top: 50px;
+        margin-left: 100px;
+      }
+
       .memberInfo {
         margin-bottom: 60px;
+
+        @media screen and (max-width: 375px) {
+          margin-bottom: 40px;
+        }
 
         .rowTitle {
           font-size: 40px;
           margin-bottom: 20px;
           color: #4B4C4C;
+
+          @media screen and (max-width: 768px) {
+            font-size: 30px;
+          }
+
+          @media screen and (max-width: 375px) {
+            font-size: 20px;
+          }
+
+          @media screen and (max-height: 600px) {
+            font-size: 30px;
+          }
         }
 
         .member {
@@ -42,6 +100,18 @@
           .memberItem {
             margin-bottom: 10px;
             font-size: 20px;
+
+            @media screen and (max-width: 768px) {
+              font-size: 18px;
+            }
+
+            @media screen and (max-width: 375px) {
+              font-size: 16px;
+            }
+
+            @media screen and (max-height: 600px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -52,6 +122,18 @@
           font-size: 40px;
           margin-bottom: 20px;
           color: #4B4C4C;
+
+          @media screen and (max-width: 768px) {
+            font-size: 30px;
+          }
+
+          @media screen and (max-width: 375px) {
+            font-size: 20px;
+          }
+
+          @media screen and (max-height: 600px) {
+            font-size: 30px;
+          }
         }
 
         .account {
@@ -62,6 +144,18 @@
           .accountItem {
             margin-bottom: 10px;
             font-size: 20px;
+
+            @media screen and (max-width: 768px) {
+              font-size: 18px;
+            }
+
+            @media screen and (max-width: 375px) {
+              font-size: 16px;
+            }
+
+            @media screen and (max-height: 600px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -75,6 +169,10 @@
         &:hover {
           text-decoration: underline;
           cursor: pointer;
+        }
+
+        @media screen and (max-width: 375px) {
+          font-size: 14px;
         }
       }
     }

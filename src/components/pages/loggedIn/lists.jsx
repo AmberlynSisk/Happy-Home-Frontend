@@ -4,11 +4,17 @@ import TodosList from '../../lists/todos/todosList'
 import Navbar from '../../navigation/navbar'
 import { useAppContext } from "../../../Context";
 import axios from "axios";
+import Sidebar from '../../navigation/sidebar';
 
 
 const Lists = () => {
   const {currentMember, setCurrentMember} = useAppContext();
   const [memberInfo, setMemberInfo] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+      setIsOpen(!isOpen)
+  };
 
 
   const getMemberInfo = () => {
@@ -32,7 +38,8 @@ const Lists = () => {
 
   return (
     <>
-    <Navbar />
+    <Sidebar isOpen={isOpen} toggle={toggle} />
+    <Navbar toggle={toggle} />
     <div className="listsWrapper">
       <div className="todoWrapper">
         <h1 className="listTitle">{memberInfo.first_name}'s To-Dos</h1>

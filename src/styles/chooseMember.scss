@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  overflow: hidden;
 
   .chooseMember {
     display: flex;
@@ -14,39 +15,97 @@
 
     img {
       width: 30em;
+
+      @media screen and (max-width: 540px) {
+        width: 25em;
+      }
+
+      @media screen and (max-width: 414px) {
+        width: 20em;
+      }
+
+      @media screen and (max-width: 390px) {
+        width: 18em;
+      }
+
+      @media screen and (max-width: 280px) {
+        width: 15em;
+      }
+
+      @media screen and (max-height: 600px) {
+        width: 20em;
+      }
     }
 
     form {
       padding: 50px;
 
+      @media screen and (max-width: 280px) {
+        padding: 40px;
+      }
+
       .chooseMemberSelect {
         padding: 10px 20px;
         font-size: 18px;
         border-radius: 4px 0 0 4px;
-        border: 1px solid #FF904D;
+        border: 1px solid #ff904d;
 
         &:focus {
           outline: none;
+        }
+
+        @media screen and (max-width: 414px) {
+          padding: 8px 18px;
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 390px) {
+          padding: 6px 16px;
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 280px) {
+          padding: 2px 8px;
+          font-size: 10px;
         }
       }
 
       .memberButton {
         padding: 10px 20px;
         font-size: 18px;
-        background-color: #FF904D;
-        border: 2px solid #FF904D;
+        background-color: #ff904d;
+        border: 2px solid #ff904d;
         border-radius: 0 4px 4px 0;
+
+        @media screen and (max-width: 414px) {
+          padding: 8px 18px;
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 390px) {
+          padding: 6px 16px;
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 280px) {
+          padding: 2px 8px;
+          font-size: 10px;
+        }
       }
     }
 
     .newMemberLink {
       text-decoration: none;
-      color: #4B4C4C;
+      color: #4b4c4c;
       font-size: 1.5em;
       transition: 0.3s ease-in-out;
 
       &:hover {
-        color: #FF904D;
+        color: #ff904d;
+      }
+
+      @media screen and (max-width: 280px) {
+        font-size: 1.2em;
       }
     }
   }

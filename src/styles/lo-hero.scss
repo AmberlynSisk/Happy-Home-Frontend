@@ -1,55 +1,111 @@
 .hero-container {
-    height: calc(100vh - 125px);
-    width: 100vw;
-    background: #d8d8d8;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  height: calc(100vh - 125px);
+  width: 100vw;
+  background: #d8d8d8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
-    .bg-img {
-        position: absolute;
-        z-index: 0;
-        align-self: center;
-        justify-self: center;
-        margin-top: 15px;
+  .bg-img {
+    position: absolute;
+    z-index: 0;
+    align-self: center;
+    justify-self: center;
+    margin-top: 15px;
 
-        img {
-            height: calc(100vh - 150px);
-            margin-left: 35px;
-        }
+    img {
+      height: calc(100vh - 150px);
+      width: 100%;
+    }
+  }
+
+  .type-subtext {
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 5;
+    font-size: 2.5em;
+    color: #606161;
+    margin-top: 200px;
+    font-family: "Roboto Serif", serif;
+
+    @media screen and (max-width: 912px) {
+      font-size: 1.8em;
+      margin-top: 400px;
     }
 
-    .type-subtext {
-        text-transform: uppercase;
-        text-align: center;
-        z-index: 5;
-        font-size: 2.5em;
-        color: #606161;
-        margin-top: 200px;
-        font-family: 'Roboto Serif', serif;
+    @media screen and (max-width: 768px) {
+      font-size: 1.8em;
+      margin-top: 220px;
     }
 
-    .signup-wrap {
-        z-index: 5;
-        text-align: center;
-        align-self: center;
-        margin-top: 55px;
-        
-        .signup-btn {
-            text-decoration: none;
-            padding: 20px;
-            background: #4B4C4C;
-            color: #fff;
-            border-radius: 10px;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: 0.3s ease-in-out;
-
-            &:hover {
-                background: #fff;
-                color: #4B4C4C;
-            }
-        }
+    @media screen and (max-width: 540px) {
+      font-size: 1.8em;
+      margin-top: 140px;
     }
+
+    @media screen and (max-width: 414px) {
+      font-size: 1.4em;
+      margin-top: 260px;
+    }
+
+    @media screen and (max-width: 375px) {
+      margin-top: 160px;
+    }
+
+    @media screen and (max-width: 280px) {
+      font-size: 1.2em;
+      margin-top: 190px;
+    }
+
+    @media screen and (max-height: 600px) {
+      font-size: 1.8em;
+      margin-top: 100px;
+    }
+  }
+
+  .signup-wrap {
+    z-index: 5;
+    text-align: center;
+    align-self: center;
+    margin-top: 55px;
+
+    @media screen and (max-width: 375px) {
+      margin-top: 40px;
+    }
+
+    .signup-btn {
+      text-decoration: none;
+      padding: 20px;
+      background: #4b4c4c;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background: #fff;
+        color: #4b4c4c;
+      }
+
+      @media screen and (max-width: 540px) {
+        font-size: 1em;
+        padding: 15px;
+      }
+
+      @media screen and (max-width: 414px) {
+        padding: 10px;
+      }
+
+      @media screen and (max-width: 280px) {
+        font-size: .75em;
+      }
+
+      @media screen and (max-height: 600px) {
+        font-size: 1em;
+        padding: 15px;
+      }
+    }
+  }
 }

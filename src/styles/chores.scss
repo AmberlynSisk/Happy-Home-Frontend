@@ -10,6 +10,10 @@
   overflow-y: scroll;
   box-shadow: 4px 4px 10px 0px #4B4C4C;
 
+  @media screen and (max-width: 414px) {
+    width: 90%;
+  }
+
   .choresForm {
     margin-bottom: 20px;
 
@@ -18,6 +22,14 @@
       border-radius: 4px 0 0 4px;
       border: 2px solid rgb(240, 171, 129);
       outline: none;
+
+      @media screen and (max-width: 375px) {
+        padding: 12px 10px 12px 12px;
+      }
+
+      @media screen and (max-height: 600px) {
+        padding: 12px 10px 12px 14px;
+      }
     }
 
     .choresButton {
@@ -33,6 +45,14 @@
       );
       color: white;
       text-transform: capitalize;
+
+      @media screen and (max-width: 375px) {
+        padding: 14px;
+      }
+      
+      @media screen and (max-height: 600px) {
+        padding: 14px;
+      }
     }
   }
 
